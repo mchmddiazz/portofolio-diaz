@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
+
+.coda-font {
+  font-family: "Coda", system-ui;
+  font-variant-ligatures: no-common-ligatures;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-weight: 400;
+}
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+}
 .custom-background {
   background-color: #171c28;
 }
 .link-title {
   font-size: 19px;
+}
+.sidebar-menu {
+  transition: 0.3s ease-in-out;
+}
+.sidebar-menu[aria-expanded="false"] {
+  transform: translateX(-100%);
+}
+.sidebar-menu[aria-expanded="true"] {
+  transform: translateX(0);
 }
