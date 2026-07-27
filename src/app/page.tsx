@@ -1,7 +1,11 @@
+import About from "@/app/sections/about";
+import Skills from "@/app/sections/skills";
+
 export default function Home() {
   return (
-    <div>
-      {/* <h1>Welcome to My App</h1> */}
-    </div>
+    <>
+      <About />
+      <Skills />
+    </>
   );
 }
