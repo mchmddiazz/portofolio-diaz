@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: 5s ease-in-out;
+}
 .coda-font {
   font-family: "Coda", system-ui;
   font-variant-ligatures: no-common-ligatures;
@@ -23,4 +30,14 @@
 }
 .sidebar-menu[aria-expanded="true"] {
   transform: translateX(0);
+}
+.main-header {
+  position: fixed;
+  top: 0;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #fff;
+}
+.main-header.scrolled {
+  background-color: #fff;
+  color: #000;
 }
