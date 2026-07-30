@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="w-full text-white py-30 px-30 custom-background border-t border-gray-200 dark:border-gray-700">
       <div className="flex flex-col md:flex-col items-center justify-center my-4 gap-4 max-w-6xl m-auto">
-        <div className="flex flex-row items-center justify-between w-full gap-4">
+        <div className="flex flex-row items-baseline justify-between w-full gap-4">
           <div className="flex flex-col items-center gap-4 mr-auto">
             <div className="footer-title w-full text-left">
               <h2 className="text-lg font-bold uppercase">General</h2>
