@@ -29,13 +29,13 @@ const entries: TimelineEntry[] = [
     type: "freelance",
     title: "Web Developer",
     organization: "Easea Co",
-    typeContract: "Freelance",
+    typeContract: "Freelance, alongside full-time role",
     period: "Nov 2021 - Dec 2021",
     description: "Responsibilities:",
     descriptionList: [
-      "Development website using Shopify platform.",
-      "Improvement and optimizing minor bugs on previous development.",
-      "Configure third party apps from Shopify App Store to enhance website functionality.",
+      "Developed websites using the Shopify platform.",
+      "Conducted website redesigns based on Figma or similar web references",
+      "Configured third-party indoshipping, chat button, and packing slip apps from Shopify App Store to enhance website functionality.",
     ]
   },
   {
@@ -43,7 +43,7 @@ const entries: TimelineEntry[] = [
     title: "Bachelor's in Informatics (in progress)",
     organization: "Widyatama University, Bandung",
     period: "Resuming 2027",
-    description: "Currently on academic leave, planning to continue coursework.",
+    description: "Currently on academic leave for work commitments, planning to continue coursework.",
     descriptionList: [
       "Currently enrolled in the Informatics program, focusing on web development and software engineering.",
     ]
@@ -72,15 +72,11 @@ export default function Timeline() {
           {entries.map((entry, i) => (
             <div key={i} className="relative">
               <span
-                className={`absolute -left-8 top-1.5 w-3.5 h-3.5 rounded-full border-2 ${
-                  entry.type === "work"
-                    ? "bg-gray-400 border-gray-400"
-                    : "bg-neutral-900 border-neutral-500"
-                }`}
+                className={`absolute -left-8 top-1.5 w-3.5 h-3.5 rounded-full border-2 bg-neutral-900 border-neutral-500`}
               />
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
                 <h3 className="font-heading text-lg font-semibold text-black">
-                  {entry.title}
+                  {entry.title} {entry.typeContract ? ` - ${entry.typeContract}` : ""}
                 </h3>
               </div>
               <p className="text-sm text-gray-400 mb-2">{entry.organization}</p>
