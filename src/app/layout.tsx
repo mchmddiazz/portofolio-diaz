@@ -5,6 +5,7 @@ import "./custom.css";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 const inter = Inter({ 
@@ -38,6 +39,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
