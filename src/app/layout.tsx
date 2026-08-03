@@ -4,6 +4,7 @@ import "./globals.css";
 import "./custom.css";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
+import { Analytics } from "@vercel/analytics/next"
 
 
 const inter = Inter({ 
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
