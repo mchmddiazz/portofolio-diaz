@@ -18,7 +18,8 @@ const spaceGrotesk = Space_Grotesk({
 
 
 export const metadata: Metadata = {
-  title: "Diaz's Portfolio",
+    title: "Diaz's Portfolio",
+    description: "Shopify developer with 5 years of experience building e-commerce solutions.",
 };
 
 export default function RootLayout({
@@ -31,7 +32,7 @@ export default function RootLayout({
       lang="en" 
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col dark:bg-white text-black dark:text-black transition-colors">
+      <body className="min-h-full flex flex-col dark:bg-[#f5f4fc] text-black dark:text-black transition-colors">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

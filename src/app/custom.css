@@ -35,9 +35,9 @@ body {
   position: fixed;
   top: 0;
   transition: background-color 0.3s ease-in-out;
-  background-color: #fff;
+  background-color: #f5f4fc;
 }
 .main-header.scrolled {
-  background-color: #fff;
+  background-color: #f5f4fc;
   color: #000;
 }

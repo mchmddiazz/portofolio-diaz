@@ -41,7 +41,7 @@ export default function About(){
         <ul className="space-y-3 mb-4 pl-4 border-l border-black-700">
           {projects.map((project) => (
             <li key={project.name}>
-              <span className="font-semibold text-white">
+              <span className="font-semibold text-black">
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
                   {project.name}
                 </a>
