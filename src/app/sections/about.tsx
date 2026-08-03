@@ -24,7 +24,7 @@ const projects = [
 
 export default function About(){
   return (
-    <div id="about" className="flex flex-col items-center justify-center min-h-screen max-w-4xl m-auto p-10">
+    <div className="flex flex-col items-center justify-center min-h-screen max-w-4xl m-auto p-10">
       <div className="text-left">
         <h1 className="text-4xl font-bold mb-4 text-left">Hi, I'm Diaz</h1>
         <p className="text-lg text-black-300 leading-relaxed mb-4">
@@ -51,7 +51,7 @@ export default function About(){
           ))}
           <li className="text-black-400 italic">
             And many more, providing continuous maintenance and support
-            services.
+            services. Explore <a href="/projects" className="text-grey-400 hover:underline font-medium cursor-pointer"> my projects</a> to see a selection of my work.
           </li>
         </ul>
         <p className="text-lg text-black-300 leading-relaxed mb-4">
@@ -69,7 +69,7 @@ export default function About(){
           feel free to{" "}
           <a
             href="mailto:mchmddiazz@gmail.com"
-            className="text-cyan-400 hover:underline font-medium cursor-pointer"
+            className="text-grey-400 hover:underline font-medium cursor-pointer"
           >
             contact me
           </a>

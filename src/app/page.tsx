@@ -1,14 +1,12 @@
 import About from "@/app/sections/about";
-import Project from "@/app/sections/project";
 import Skills from "@/app/sections/skills";
+// import ProjectRoute from "@/app/components/ProjectRoute";
 
 export default function Home() {
   return (
     <>
       <About />
-      {/* <Project /> */}
-      {/* <Skills /> */}
-      
+      {/* <ProjectRoute /> */}
     </>
   );
 }

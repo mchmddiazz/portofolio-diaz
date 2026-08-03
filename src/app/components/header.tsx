@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronRightIcon } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,40 +30,43 @@ export default function Header() {
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
-      <div className="flex items-center w-full md:w-auto">
-        <h1 className="text-lg font-bold coda-font">〈</h1>
-        <h1 className="text-lg font-bold coda-font">/〉</h1>
-      </div>
+        <a href="/" className="text-xl font-bold">
+          <div className="flex items-center w-full md:w-auto">
+              <h1 className="text-lg font-bold coda-font">〈&nbsp;TamDev</h1>
+              <h1 className="text-lg font-bold coda-font"> &nbsp;/〉</h1>
+          </div>
+        </a>
       <div className="md:flex items-center gap-4 ml-auto pr-4 hidden">
         <nav className="flex items-center gap-8 text-sm font-medium">
-          <a href="#about" className="hover:text-cyan-400 transition-colors">
+          <a href="/" className="hover:text-grey-600 transition-colors">
             <span className="link-title">About</span>
           </a>
-          <a href="#skills" className="hover:text-cyan-400 transition-colors">
-            <span className="link-title">Skills</span>
+          <a href="/experience" className="hover:text-grey-600 transition-colors">
+            <span className="link-title">Experience</span>
           </a>
-          <a href="#project" className="hover:text-cyan-400 transition-colors">
-            <span className="link-title">Project</span>
+          <a href="/projects" className="hover:text-grey-600 transition-colors">
+            <span className="link-title">Projects</span>
+          </a>
+          <a href="/resume/Resume-Mochamad-Dhias.pdf" className="hover:text-grey-600 transition-colors" target="_blank" rel="noopener noreferrer">
+            <span className="link-title">My Resume</span>
           </a>
         </nav>
       </div>
-        <div className="md:hidden fixed inset-0 sidebar-menu bg-black" aria-expanded={isOpen}>
+        <div className="md:hidden fixed inset-0 sidebar-menu bg-[#171c28] h-fit top-[60px]" aria-expanded={isOpen}>
           {isOpen ? (
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-6">
-                <button onClick={() => setIsOpen(!isOpen)} className="p-1" aria-expanded={isOpen}>
-                  {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                </button>
-              </div>
+            <div className="p-6 nav-mobile">
               <nav className="flex flex-col gap-4">
-                <a href="#about" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>
-                  <span className="link-title">About</span>
+                <a href="/" className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)}>
+                  <span className="link-title">About</span> <ChevronRightIcon />
                 </a>
-                <a href="#project" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>
-                  <span className="link-title">Project</span>
+                <a href="/projects" className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)}>
+                  <span className="link-title">Projects</span> <ChevronRightIcon />
                 </a>
-                <a href="#contact" className="hover:text-cyan-400 transition-colors" onClick={() => setIsOpen(false)}>
-                  <span className="link-title">Contact</span>
+                <a href="/experience" className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)}>
+                  <span className="link-title">Experience</span> <ChevronRightIcon />
+                </a>
+                <a href="/resume/Resume-Mochamad-Dhias.pdf" className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer">
+                  <span className="link-title">My Resume</span> <ChevronRightIcon />
                 </a>
               </nav>
             </div>
