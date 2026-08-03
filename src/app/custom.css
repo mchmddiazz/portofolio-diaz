@@ -34,6 +34,21 @@ body {
   background-color: #171c28;
   color: #fff;
 }
+.project-card {
+    border: 1px solid #000;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.project-card:hover {
+    border-color: #000;
+    box-shadow: 5px 5px 0;
+}
+.project-card-desc {
+  padding: 0 10px 20px;
+}
+.project-card-desc p {
+  min-height: 6rem;
+}
+
 
 @media only screen and (max-width: 749px) {
   .main-header {

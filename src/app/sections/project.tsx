@@ -1,12 +1,5 @@
-// app/projects/page.tsx
 import Image from "next/image";
-// import type { Metadata } from "next";
 import { ChevronRightCircleIcon } from "lucide-react";
-
-// export const metadata: Metadata = {
-//   title: "Projects - Diaz's Portfolio",
-//   description: "A showcase of selected projects I've worked on, highlighting my skills in web development and design.",
-// };
 
 const projects = [
   {
@@ -58,7 +51,8 @@ export default function ProjectsPage() {
         <div className="flex flex-wrap mb-10">
             {projects.map((project) => (
               <div className="basis-full md:basis-1/2 lg:basis-1/3 px-2 mb-8" key={project.name}>
-                  <div className="relative w-full h-[220px] sm:h-[280px] md:h-[320px] lg:h-[15em] overflow-hidden rounded-xl">
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="block group project-card">
+                  <div className="relative w-full h-[220px] sm:h-[280px] md:h-[320px] lg:h-[15em] overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.name}
@@ -68,16 +62,17 @@ export default function ProjectsPage() {
                       className="object-cover"
                     />
                   </div>
-                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-black-400 hover:text-black-300 transition-colors mt-2 inline-block">
+                  <div className="project-card-desc">
                     <h2 className="text-xl font-bold mt-4">{project.name}</h2>
                     <span className="inline-block bg-black text-white text-xs font-bold px-2 py-1 rounded-full mt-2">
                       {project.tech.join(", ")}
                     </span>
                     <p className="text-sm md:text-base text-gray-600 mt-2">{project.description}</p>
-                  </a>
-                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-black-400 hover:text-black-300 transition-colors mt-2">
-                    <span className="text-xs md:text-sm font-medium mr-2">Visit Project</span> <ChevronRightCircleIcon width={15} height={15} />
-                  </a>
+                    <div className="flex items-center text-black-400 hover:text-black-300 transition-colors mt-2">
+                      <span className="text-xs md:text-sm font-medium mr-2">Visit Project</span> <ChevronRightCircleIcon width={15} height={15} />
+                    </div>
+                  </div>
+                </a>
               </div>
             ))}
         </div>
