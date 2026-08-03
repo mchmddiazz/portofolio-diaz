@@ -5,6 +5,7 @@ import { Menu, X, ChevronRightIcon } from "lucide-react";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -14,12 +15,23 @@ export default function Header() {
     }
   };
 
+  const checkLinks = () => {
+    const links = window.location.pathname;
+    if (links === "/") {
+      setIsChecked(true);
+    } else {
+      setIsChecked(false);
+    }
+  }
+
   useEffect(() => {
+    checkLinks();
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      console.log(checkLinks());
     };
   }, []);
 
@@ -38,10 +50,10 @@ export default function Header() {
         </a>
       <div className="md:flex items-center gap-4 ml-auto pr-4 hidden">
         <nav className="flex items-center gap-8 text-sm font-medium">
-          <a href="/" className="hover:text-grey-600 transition-colors">
+          <a href={isChecked ? "#about" : "/"} className="hover:text-grey-600 transition-colors">
             <span className="link-title">About</span>
           </a>
-          <a href="/experience" className="hover:text-grey-600 transition-colors">
+          <a href={isChecked ? "#experience" : "/#experience"} className="hover:text-grey-600 transition-colors">
             <span className="link-title">Experience</span>
           </a>
           <a href="/projects" className="hover:text-grey-600 transition-colors">
@@ -56,14 +68,14 @@ export default function Header() {
           {isOpen ? (
             <div className="p-6 nav-mobile">
               <nav className="flex flex-col gap-4">
-                <a href="/" className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)}>
+                <a href={isChecked ? "#about" : "/"} className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)}>
                   <span className="link-title">About</span> <ChevronRightIcon />
+                </a>
+                <a href={isChecked ? "#experience" : "/#experience"} className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)}>
+                  <span className="link-title">Experience</span> <ChevronRightIcon />
                 </a>
                 <a href="/projects" className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)}>
                   <span className="link-title">Projects</span> <ChevronRightIcon />
-                </a>
-                <a href="/experience" className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)}>
-                  <span className="link-title">Experience</span> <ChevronRightIcon />
                 </a>
                 <a href="/resume/Resume-Mochamad-Dhias.pdf" className="flex items-center justify-between text-white transition-colors" onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer">
                   <span className="link-title">My Resume</span> <ChevronRightIcon />

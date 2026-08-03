@@ -24,17 +24,17 @@ const projects = [
 
 export default function About(){
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen max-w-4xl m-auto p-10">
+    <div id="about" className="flex flex-col items-center justify-center min-h-screen max-w-4xl m-auto p-8">
       <div className="text-left">
-        <h1 className="text-4xl font-bold mb-4 text-left">Hi, I'm Diaz</h1>
-        <p className="text-lg text-black-300 leading-relaxed mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-left">Hi, I'm Diaz</h1>
+        <p className="text-base md:text-lg text-black-300 leading-relaxed mb-4">
           A Web Developer with 5 years of experience building e-commerce
           solutions within the Shopify ecosystem. My work spans theme
           development, store customization, and functional integrations
           using HTML, CSS, JavaScript, and Liquid — this has shaped how I
           think about building fast, maintainable e-commerce platforms.
         </p>
-        <p className="text-lg text-black-300 leading-relaxed mb-4">
+        <p className="text-base md:text-lg text-black-300 leading-relaxed mb-4">
           At Boleh Dicoba Digital, I&apos;ve worked across a range of Shopify
           projects, including:
         </p>
@@ -46,7 +46,7 @@ export default function About(){
                   {project.name}
                 </a>
               </span>{" "}
-              <span className="text-lg text-black-300">— {project.description}</span>
+              <span className="text-base md:text-lg text-black-300">— {project.description}</span>
             </li>
           ))}
           <li className="text-black-400 italic">
@@ -54,17 +54,17 @@ export default function About(){
             services. Explore <a href="/projects" className="text-grey-400 hover:underline font-medium cursor-pointer"> my projects</a> to see a selection of my work.
           </li>
         </ul>
-        <p className="text-lg text-black-300 leading-relaxed mb-4">
+        <p className="text-base md:text-lg text-black-300 leading-relaxed mb-4">
           I&apos;m comfortable working with Git for version control and
           applying Agile methodologies within team workflows, ensuring
           changes are well-documented and development stays efficient.
         </p>
-        <p className="text-lg text-black-300 leading-relaxed mb-6">
+        <p className="text-base md:text-lg text-black-300 leading-relaxed mb-6">
           I&apos;m committed to continuously learning and deepening my
           expertise in the Shopify ecosystem and the practices around it, so
           that the solutions I build stay relevant and impactful.
         </p>
-        <p className="text-lg text-black-300">
+        <p className="text-base md:text-lg text-black-300">
           If you have a question, a proposal, or just want to say hello,
           feel free to{" "}
           <a

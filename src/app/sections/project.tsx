@@ -48,10 +48,10 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <section className="py-20">
+    <section className="py-10 md:py-20">
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="font-heading text-3xl font-bold mb-5 text-center">Projects</h1>
-        <p className="text-gray-600 text-center mb-10 text-sm md:text-base">
+        <p className="text-gray-600 text-center mb-5 md:mb-10 text-sm md:text-base">
           Here are some of selected the projects I've worked on. <br/>
           Each project presents unique challenges and opportunities to apply my skills in web development and design.
         </p>
@@ -73,10 +73,10 @@ export default function ProjectsPage() {
                     <span className="inline-block bg-black text-white text-xs font-bold px-2 py-1 rounded-full mt-2">
                       {project.tech.join(", ")}
                     </span>
-                    <p className="text-gray-600 mt-2">{project.description}</p>
+                    <p className="text-sm md:text-base text-gray-600 mt-2">{project.description}</p>
                   </a>
                   <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-black-400 hover:text-black-300 transition-colors mt-2">
-                    <span className="text-sm font-medium mr-4">Visit Project</span> <ChevronRightCircleIcon />
+                    <span className="text-xs md:text-sm font-medium mr-2">Visit Project</span> <ChevronRightCircleIcon width={15} height={15} />
                   </a>
               </div>
             ))}
