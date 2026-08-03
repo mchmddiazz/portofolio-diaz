@@ -35,6 +35,11 @@ export default function About(){
           think about building fast, maintainable e-commerce platforms.
         </p>
         <p className="text-base md:text-lg text-black-300 leading-relaxed mb-4">
+          Beyond Shopify, I'm building full-stack capabilities — currently 
+          learning [e.g. Node.js, databases, React] — to broaden how I can 
+          contribute across the entire product, not just the storefront.
+        </p>
+        <p className="text-base md:text-lg text-black-300 leading-relaxed mb-4">
           At Boleh Dicoba Digital, I&apos;ve worked across a range of Shopify
           projects, including:
         </p>
