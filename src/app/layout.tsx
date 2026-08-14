@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import "./custom.css";
+// import "@radix-ui/themes/styles.css";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
+// import { Theme } from "@radix-ui/themes";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -35,11 +37,13 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col dark:bg-[#f5f4fc] text-black dark:text-black transition-colors">
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
+        {/* <Theme> */}
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+        {/* </Theme> */}
       </body>
     </html>
   );
